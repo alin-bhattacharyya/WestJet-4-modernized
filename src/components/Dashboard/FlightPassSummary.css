@@ -1,0 +1,226 @@
+/* Flight Pass: selected pass summary and details. */
+/* Selected pass */
+.wj-pass__selected {
+  overflow: hidden;
+  border: 2px solid var(--wj-action-primary);
+  border-radius: 8px;
+  background: #fff;
+}
+.wj-pass__summary {
+  display: flex;
+}
+.wj-pass__balance {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 440px;
+  background: var(--wj-brand-navigation);
+  padding: 32px;
+  color: #fff;
+}
+.wj-pass__balance-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wj-pass__balance-label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-pass__balance-number {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.wj-pass__balance-value {
+  font-size: 104px;
+  font-weight: 600;
+  line-height: 112px;
+}
+.wj-pass__balance-total {
+  padding-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.wj-pass__usage {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wj-pass__usage-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.wj-pass__usage-left {
+  color: var(--wj-brand-lime);
+}
+.wj-pass__usage-bar {
+  display: flex;
+  overflow: hidden;
+  height: 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+.wj-pass__usage-bar span {
+  background: var(--wj-brand-lime);
+}
+.wj-pass__info {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  padding: 32px;
+}
+.wj-pass__info-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wj-pass__info-title h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-pass__info-ref {
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 25px;
+}
+.wj-pass__facts {
+  display: flex;
+  gap: 24px;
+}
+.wj-pass__fact {
+  display: flex;
+  flex: 1 1 0;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+.wj-pass__fact-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: #e5f2f3;
+}
+.wj-pass__fact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wj-pass__fact-text span {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-pass__fact-text b,
+.wj-pass__row b {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-pass__row b {
+  line-height: 25px;
+}
+.wj-pass__actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Pass details */
+.wj-pass__details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding: 32px;
+  scroll-margin-top: 24px;
+}
+.wj-pass__details-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+.wj-pass__details-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.wj-pass__details-header span {
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-pass__columns {
+  display: flex;
+  gap: 32px;
+}
+.wj-pass__column {
+  display: flex;
+  box-sizing: content-box;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+.wj-pass__column + .wj-pass__column {
+  border-left: 1px solid var(--wj-border-subtle);
+  padding-left: 32px;
+}
+.wj-pass__column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-pass__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wj-pass__route,
+.wj-pass__rule {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-pass__route {
+  align-items: center;
+  white-space: nowrap;
+}
+.wj-pass__rule {
+  align-items: flex-start;
+}
+.wj-pass__rule img {
+  flex-shrink: 0;
+}
+.wj-pass__row {
+  display: flex;
+  flex-direction: column;
+}
+.wj-pass__row span {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-pass__body {
+  font-size: 14px;
+  line-height: 24.5px;
+}
+

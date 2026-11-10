@@ -1,0 +1,296 @@
+/* Confirmed flights */
+.wj-confirmation__flights {
+  display: flex;
+  flex-direction: column;
+}
+.wj-confirmation__flights-meta {
+  padding-top: 8px;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-confirmation__segment {
+  padding: 16px 0;
+}
+.wj-confirmation__segment:not(:last-child) {
+  border-bottom: 1px solid var(--wj-border-subtle);
+}
+.wj-confirmation__segment-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wj-confirmation .wj-confirmation__segment-head h3 {
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-confirmation__segment-body {
+  display: flex;
+  height: 51px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 24.5px;
+  white-space: nowrap;
+}
+.wj-confirmation .wj-confirmation__segment-meta {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-confirmation__segment-meta b {
+  color: #00aaa6;
+  font-weight: 600;
+}
+.wj-confirmation .wj-confirmation__segment-times {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+/* Payment + contact boxes */
+.wj-confirmation__box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  white-space: nowrap;
+}
+.wj-confirmation__box-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--wj-border-subtle);
+  padding-bottom: 11px;
+}
+.wj-confirmation__box-head button {
+  color: var(--wj-action-primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  cursor: pointer;
+}
+.wj-confirmation__box-head button:hover {
+  text-decoration: underline;
+}
+.wj-confirmation__payment {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.wj-confirmation__pay-col {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-confirmation__pay-col--charges {
+  gap: 10px;
+  border-left: 1px solid var(--wj-border-subtle);
+  padding-left: 16px;
+}
+.wj-confirmation__pay-col > div {
+  display: flex;
+  justify-content: space-between;
+}
+.wj-confirmation__pay-col dt {
+  color: var(--wj-text-secondary);
+}
+.wj-confirmation__pay-col dd {
+  margin: 0;
+}
+.wj-confirmation__pay-col .wj-confirmation__deduction {
+  color: #00aaa6;
+  font-family: Inter, var(--wj-font);
+  font-size: 13px;
+  line-height: normal;
+}
+.wj-confirmation__pay-col .wj-confirmation__deduction dt {
+  color: inherit;
+}
+.wj-confirmation__deduction dd {
+  font-weight: 600;
+}
+.wj-confirmation__pay-col .wj-confirmation__pay-line {
+  height: 1px;
+  background: var(--wj-border-subtle);
+}
+.wj-confirmation__pay-col .wj-confirmation__paid {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-confirmation__pay-col .wj-confirmation__paid dt {
+  color: #171717;
+}
+.wj-confirmation__paid dd {
+  color: #00aaa6;
+}
+.wj-confirmation__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-confirmation__contact p {
+  display: flex;
+  gap: 8px;
+}
+.wj-confirmation__contact span {
+  color: var(--wj-text-secondary);
+}
+.wj-confirmation__contact b {
+  font-weight: 600;
+}
+
+/* Manage */
+.wj-confirmation__manage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 0.8px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  padding: 22px 24px;
+  background: var(--wj-surface-default);
+}
+.wj-confirmation__manage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wj-confirmation__manage-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  border: 0.8px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--wj-surface-default);
+  text-align: left;
+  cursor: pointer;
+}
+.wj-confirmation__manage-row:hover {
+  border-color: var(--wj-action-primary);
+}
+.wj-confirmation__manage-icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.wj-confirmation__manage-icon--warning { background: #fff7e3; }
+.wj-confirmation__manage-icon--info { background: #eff6ff; }
+.wj-confirmation__manage-icon--teal { background: #e5f2f3; }
+.wj-confirmation__manage-icon--orange { background: #fff3e0; }
+.wj-confirmation__manage-icon--error { background: #fff1f3; }
+.wj-confirmation__manage-text {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 3px;
+  white-space: nowrap;
+}
+.wj-confirmation__manage-text b {
+  color: var(--wj-text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-confirmation__manage-text span {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-confirmation__manage-row.is-danger .wj-confirmation__manage-text {
+  gap: 0;
+}
+.wj-confirmation__manage-row.is-danger b,
+.wj-confirmation__manage-row.is-danger span {
+  color: #b00121;
+}
+
+/* Flight Pass balance */
+.wj-confirmation__balance {
+  display: flex;
+  border-radius: 8px;
+  padding: 20px 24px;
+  background: #fff;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1))
+    drop-shadow(0 10px 7.5px rgba(0, 0, 0, 0.1));
+}
+.wj-confirmation__balance-image {
+  position: relative;
+  width: 129px;
+  min-height: 90px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.wj-confirmation__balance-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wj-confirmation__balance-body {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 16px 0 20px;
+}
+.wj-confirmation .wj-confirmation__balance-body h2,
+.wj-confirmation .wj-confirmation__help h2 {
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-confirmation__balance-body p {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-confirmation__balance-body p b {
+  color: #00aaa6;
+  font-weight: 600;
+}
+.wj-confirmation__balance-body .wj-confirmation__primary {
+  margin: 4px 0;
+}
+
+/* Help */
+.wj-confirmation__help {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 8px;
+  padding: 24px;
+  background: #e5f2f3;
+}
+.wj-confirmation .wj-confirmation__help h2 {
+  color: var(--wj-action-hover);
+}
+.wj-confirmation__help a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--wj-text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}

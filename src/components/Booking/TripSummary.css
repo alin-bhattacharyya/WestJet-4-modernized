@@ -1,0 +1,139 @@
+.wj-offer-held {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #b00121;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff1f3;
+  color: #b00121;
+  font-family: Inter, var(--wj-font);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.wj-trip-summary {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  background: var(--wj-surface-default);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+  white-space: nowrap;
+}
+.wj-trip-summary h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-trip-summary__leg {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--wj-border-subtle);
+  padding-bottom: 16px;
+}
+.wj-trip-summary__leg-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.wj-trip-summary__leg-head h3 {
+  color: #171717;
+  font-family: Inter, var(--wj-font);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.wj-trip-summary__leg-head span {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-trip-summary__leg > p {
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+  white-space: pre;
+}
+.wj-trip-summary__route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-trip-summary__route b {
+  font-weight: 600;
+}
+.wj-trip-summary__route span {
+  color: var(--wj-text-secondary);
+}
+.wj-trip-summary__rows,
+.wj-trip-summary__charges {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-trip-summary__rows {
+  gap: 6px;
+}
+.wj-trip-summary__charges {
+  gap: 10px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding-top: 16px;
+}
+.wj-trip-summary__rows > div,
+.wj-trip-summary__charges > div,
+.wj-trip-summary__total > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.wj-trip-summary__rows dt,
+.wj-trip-summary__charges dt {
+  color: var(--wj-text-secondary);
+}
+.wj-trip-summary__rows dd {
+  font-weight: 600;
+}
+.wj-trip-summary__total {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding-top: 16px;
+}
+.wj-trip-summary__total > div:first-child {
+  align-items: center;
+  font-weight: 600;
+}
+.wj-trip-summary__total > div:first-child span {
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-trip-summary__total > div:first-child b {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-trip-summary__commission {
+  color: #236044;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-trip-summary__commission b {
+  font-weight: 600;
+}
+.wj-trip-summary__total p {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+}

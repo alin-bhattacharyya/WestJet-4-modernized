@@ -1,0 +1,294 @@
+/* V3 home dashboard (Figma 1:10332) and My trips.
+   Multi-stop gradients emulate Figma's straight-alpha interpolation, which CSS
+   (premultiplied) would otherwise render darker. */
+.wj-home__columns {
+  display: grid;
+  grid-template-columns: 1139px 373px;
+  align-items: start;
+  gap: 24px;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-home__main,
+.wj-home__aside {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 24px;
+}
+.wj-home__pair {
+  display: grid;
+  grid-template-columns: 551px 564px;
+  align-items: start;
+  gap: 24px;
+}
+.wj-home__columns h2,
+.wj-home__table-card h2,
+.wj-home__card h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+/* Buttons */
+.wj-home__text-button {
+  display: inline-flex;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 6px 2px;
+  border-radius: 4px;
+  padding: 0 12px;
+  color: var(--wj-action-primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.wj-home__text-button:hover {
+  background: #e6f5f5;
+}
+.wj-home__action {
+  display: inline-flex;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: var(--wj-action-primary);
+  padding: 0 12px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.wj-home__action:hover {
+  background: var(--wj-action-hover);
+}
+.wj-home__action--outline {
+  border-color: var(--wj-action-primary);
+  background: #fff;
+  color: var(--wj-action-primary);
+}
+.wj-home__action--outline:hover {
+  background: #e6f5f5;
+}
+.wj-home__text-button:focus-visible,
+.wj-home__action:focus-visible,
+.wj-home__row:focus-visible,
+.wj-home__cell-action button:focus-visible {
+  outline: 2px solid #154e55;
+  outline-offset: 2px;
+}
+
+/* Shared surfaces */
+.wj-home__panel {
+  border: 1px solid var(--wj-border-subtle);
+  background: #fff;
+  padding: 24px;
+}
+.wj-home__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.wj-home__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  background: #fff;
+  padding: 24px;
+}
+.wj-home__pill {
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: var(--wj-neutral-100);
+  padding: 4px 10px;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.wj-home__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  padding: 2px 8px 2px 6px;
+  font-family: Inter, var(--wj-font);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+  mix-blend-mode: multiply;
+}
+.wj-home__badge--success {
+  background: #eff7f1;
+  color: #236044;
+}
+.wj-home__badge--neutral {
+  background: #f0f7f7;
+  color: var(--wj-text-secondary);
+}
+.wj-home__badge--error {
+  background: #fff1f3;
+  color: #b00121;
+}
+
+/* Upcoming trip */
+.wj-home__trip-hero {
+  margin-top: 16px;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  background:
+    linear-gradient(99.9deg, rgb(0 51 99 / 1) 7.764%, rgb(0 48 93 / 0.875) 18.817%, rgb(0 45 88 / 0.75) 29.869%, rgb(0 42 82 / 0.625) 40.922%, rgb(0 40 76 / 0.5) 51.975%, rgb(0 37 70 / 0.375) 63.028%, rgb(0 34 65 / 0.25) 74.081%, rgb(0 31 59 / 0.125) 85.134%, rgb(0 28 53 / 0) 96.187%),
+    url("/figma-assets/v3/home-upcoming-vancouver.jpg") 0 21.31% / 100% 232.03% no-repeat;
+  background-origin: border-box;
+  padding: 24px;
+  color: #fff;
+}
+.wj-home__trip-top {
+  display: flex;
+  height: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-home__trip-top img {
+  margin: 1.494px 1.494px 0 1.166px;
+}
+.wj-home__trip-hero h3 {
+  margin: 16px 0 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 37px;
+}
+.wj-home__trip-hero p {
+  margin: 0;
+}
+.wj-home__trip-route {
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 25px;
+}
+.wj-home__trip-meta {
+  padding-top: 16px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-home__trip-hero .wj-home__trip-price {
+  position: relative;
+  height: 50px;
+  margin-top: 16px;
+  border-top: 1px solid var(--wj-border-subtle);
+  white-space: nowrap;
+}
+.wj-home__trip-price b {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-home__trip-price span {
+  position: absolute;
+  top: 26px;
+  left: 96.41px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Trips table */
+.wj-home__table-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 6%);
+}
+.wj-home__table-card::after,
+.wj-home__activity::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.wj-home__table-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+  min-height: 77px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px 24px;
+}
+.wj-home__table-header h2 {
+  flex: 1;
+}
+.wj-home__table-scroll {
+  overflow-x: auto;
+}
+.wj-home__table {
+  width: 100%;
+  min-width: 1139px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.wj-home__table th,
+.wj-home__table td {
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 16px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wj-home__table th {
+  height: 44px;
+  background: #fafafa;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.wj-home__table td {
+  height: 72px;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-home__table .wj-home__cell-strong {
+  color: var(--wj-text-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.wj-home__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.wj-home__table .wj-home__cell-action {
+  padding: 0 24px;
+}
+.wj-home__cell-action button {
+  display: flex;
+  border-radius: 4px;
+  cursor: pointer;
+}

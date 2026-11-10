@@ -1,0 +1,313 @@
+.wj-payment__heading {
+  display: flex;
+  flex-direction: column;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-payment__heading h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+}
+.wj-payment__heading p {
+  position: relative;
+  top: 1px;
+  margin: 0;
+  padding-top: 8px;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+
+.wj-payment {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-payment__main {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-payment__side {
+  display: flex;
+  width: 360px;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-payment__card h2,
+.wj-payment__section h2,
+.wj-payment__panel h3,
+.wj-payment__pass-body h3,
+.wj-payment__box h3,
+.wj-payment__summary h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.wj-payment__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: var(--wj-surface-default);
+}
+.wj-payment__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--wj-border-subtle);
+  /* Figma strokes are inside here: 24px padding includes the border. */
+  padding: 23px;
+  background: var(--wj-surface-default);
+}
+.wj-payment__section .wj-payment__section-title {
+  border-bottom: 1px solid var(--wj-border-subtle);
+  padding-bottom: 11px;
+}
+
+/* Payment method cards */
+.wj-payment__methods {
+  display: flex;
+  gap: 16px;
+}
+.wj-payment__method {
+  position: relative;
+  display: flex;
+  height: 80.5px;
+  min-width: 0;
+  flex: 1 1 0;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--wj-surface-default);
+  cursor: pointer;
+}
+.wj-payment__method.is-selected {
+  border-color: var(--wj-action-primary);
+  background: #e5f2f3;
+}
+.wj-payment__method:has(input:focus-visible) {
+  box-shadow: 0 0 0 2px var(--wj-action-hover);
+}
+.wj-payment__method input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.wj-payment__method-text {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.wj-payment__method-text span:first-child {
+  /* Figma rounds the 24.5px line box down: text sits 1px lower. */
+  padding-top: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-payment__method-text span:last-child {
+  padding-top: 5px;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Selected method panel (Travel Bank, Split, cards) */
+.wj-payment__panel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  /* 1px nudges match Figma's half-pixel text placement; total height is unchanged. */
+  padding: 25px 24px 23px;
+  background: #e5f2f3;
+}
+.wj-payment__panel-text {
+  height: 33px;
+  margin: 0;
+  padding-top: 9px;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-payment__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 21px;
+}
+.wj-payment__row {
+  display: flex;
+  height: 25px;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--wj-text-primary);
+  font-size: 14px;
+  line-height: 24.5px;
+  white-space: nowrap;
+}
+.wj-payment__row > :first-child {
+  color: var(--wj-text-secondary);
+}
+.wj-payment__row--strong,
+.wj-payment__row--strong > :first-child {
+  color: var(--wj-text-primary);
+  font-weight: 600;
+}
+.wj-payment__amount {
+  width: auto;
+  min-width: 1ch;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: right;
+  field-sizing: content;
+  outline: none;
+}
+.wj-payment__amount:focus {
+  box-shadow: 0 1px 0 var(--wj-action-hover);
+}
+.wj-payment__panel .wj-payment__grid {
+  padding-top: 19px;
+}
+
+/* Fields */
+.wj-payment__grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.wj-payment__field {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 4px;
+}
+.wj-payment__label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-payment__hint {
+  margin: 0;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-payment__boundary {
+  border-radius: 6px;
+  padding: 4px;
+}
+.wj-payment__boundary:focus-within {
+  box-shadow: inset 0 0 0 2px var(--wj-action-hover);
+}
+.wj-payment__control-wrap {
+  position: relative;
+}
+.wj-payment__control {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  border: 1px solid var(--wj-border-default);
+  border-radius: 4px;
+  padding: 0 11px;
+  background: var(--wj-surface-default);
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+  font-size: 14px;
+  line-height: 24.5px;
+  outline: none;
+  appearance: none;
+}
+.wj-payment__control--select,
+.wj-payment__control:has(+ .wj-payment__icon) {
+  padding-right: 42px;
+}
+.wj-payment__control--select {
+  cursor: pointer;
+}
+.wj-payment__icon {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  pointer-events: none;
+}
+
+/* Terms */
+.wj-payment__terms-text {
+  margin: 0;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-payment__agree {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.wj-payment__agree input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.wj-payment__checkbox {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--wj-border-default);
+  border-radius: 4px;
+  background: var(--wj-surface-default);
+}
+.wj-payment__checkbox img {
+  visibility: hidden;
+}
+.wj-payment__agree input:checked + .wj-payment__checkbox {
+  border-color: var(--wj-action-primary);
+  background: var(--wj-action-primary);
+}
+.wj-payment__agree input:checked + .wj-payment__checkbox img {
+  visibility: visible;
+}
+.wj-payment__agree input:focus-visible + .wj-payment__checkbox {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--wj-action-hover);
+}
+.wj-payment__error {
+  margin: 0;
+  border: 1px solid #b00121;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff1f3;
+  color: #b00121;
+  font-size: 12px;
+  line-height: 18px;
+}

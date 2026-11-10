@@ -1,0 +1,186 @@
+/* Flight selection (outbound / return), Figma V3 frames 1:10455, 1:10629, 1:10542, 1:10706 */
+.wj-flights__best,
+.wj-flights__layout {
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-flights__best {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wj-flights__best-header {
+  display: flex;
+  height: 52px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.wj-flights__best-header h2 {
+  padding-top: 6px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+/* Tertiary WJ/Button: 44px white body inside a 4px wrapper */
+.wj-flights__text-button {
+  display: inline-flex;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--wj-action-primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  line-height: normal;
+  white-space: nowrap;
+}
+.wj-flights__text-button:hover:not(:disabled) {
+  background: #e6f5f5;
+}
+.wj-flights__text-button:disabled {
+  color: #929c9e;
+  cursor: default;
+}
+.wj-flights__text-button[aria-pressed="true"] {
+  border-color: var(--wj-action-primary);
+}
+
+.wj-flights__time-cards {
+  display: flex;
+  gap: 16px;
+}
+.wj-flights__time-card {
+  display: flex;
+  min-width: 0;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 16px;
+  padding: 15px;
+  background: #fff;
+  text-align: left;
+}
+.wj-flights__time-card:hover,
+.wj-flights__time-card.is-active {
+  border-color: var(--wj-action-primary);
+}
+.wj-flights__time-card.is-active {
+  box-shadow: inset 0 0 0 1px var(--wj-action-primary);
+}
+.wj-flights__time-card-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.wj-flights__time-card-row--price {
+  align-items: baseline;
+}
+.wj-flights__time-card-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.wj-flights__time-card b {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.wj-flights__time-card em {
+  border-radius: 16px;
+  padding: 2px 8px;
+  background: #eff7f1;
+  color: #236044;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  mix-blend-mode: multiply;
+}
+.wj-flights__time-card small {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__time-card strong {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-flights__time-card strong.is-best {
+  color: #236044;
+}
+.wj-flights__savings {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e0e7ff;
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: #eef2ff;
+  color: #003c71;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+}
+.wj-flights__savings b {
+  font-weight: 700;
+}
+
+/* Two-column results layout */
+.wj-flights__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.wj-flights__aside {
+  display: flex;
+  width: 360px;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+.wj-flights__results {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-flights__calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-flights__heading h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 37px;
+}
+.wj-flights__heading p {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-flights__empty {
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  padding: 32px;
+  background: #fff;
+  font-size: 14px;
+}

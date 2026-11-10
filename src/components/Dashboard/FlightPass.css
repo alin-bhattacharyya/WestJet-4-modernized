@@ -1,0 +1,262 @@
+/* Flight Pass page (Figma 1:11278). Sections are 32px apart; footer follows 32px below. */
+.wj-pass {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 8px;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+
+.wj-pass h1,
+.wj-pass h2,
+.wj-pass h3,
+.wj-pass h4,
+.wj-pass p {
+  margin: 0;
+}
+
+/* Intro */
+.wj-pass__intro {
+  display: flex;
+  min-height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.wj-pass__intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wj-pass__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36.4px;
+}
+.wj-pass__lead {
+  color: var(--wj-text-secondary);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Buttons and links */
+.wj-pass__button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.wj-pass__button--primary {
+  background: var(--wj-action-primary);
+  color: #fff;
+}
+.wj-pass__button--primary:hover {
+  background: var(--wj-action-hover);
+}
+.wj-pass__button--primary:disabled {
+  background: #eceeee;
+  color: #929c9e;
+  cursor: not-allowed;
+}
+.wj-pass__button--primary:disabled img {
+  opacity: 0;
+}
+.wj-pass__button--outline {
+  border: 1px solid var(--wj-action-primary);
+  background: #fff;
+  color: var(--wj-action-primary);
+}
+.wj-pass__button--outline:hover {
+  background: #f0f7f7;
+}
+.wj-pass__button--block {
+  width: 100%;
+}
+.wj-pass__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  border-radius: 4px;
+  padding: 0;
+  color: var(--wj-action-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.wj-pass__link:hover {
+  text-decoration: underline;
+}
+.wj-pass button:focus-visible,
+.wj-pass__details:focus-visible {
+  outline: 2px solid var(--wj-action-hover);
+  outline-offset: 2px;
+}
+.wj-pass__details:focus {
+  outline: none;
+}
+
+/* Section headers */
+.wj-pass__active,
+.wj-pass__activity,
+.wj-pass__discover {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.wj-pass__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.wj-pass__section-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+  white-space: nowrap;
+}
+.wj-pass__section-note,
+.wj-pass__small,
+.wj-pass__note {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Pass tabs */
+.wj-pass__tabs {
+  display: flex;
+  gap: 16px;
+}
+.wj-pass__tab {
+  display: flex;
+  box-sizing: content-box;
+  flex: 1 1 0;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  height: 70px;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  background: #fff;
+  padding: 0 16px;
+  text-align: left;
+  cursor: pointer;
+}
+.wj-pass__tab--selected {
+  height: 68px;
+  border: 2px solid var(--wj-action-primary);
+}
+.wj-pass__tab-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #e5f2f3;
+}
+.wj-pass__tab--selected .wj-pass__tab-icon {
+  background: var(--wj-action-primary);
+}
+.wj-pass__tab-name {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  white-space: nowrap;
+}
+.wj-pass__tab-name b {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-pass__tab-name span {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-pass__tab-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.wj-pass__tab-balance b {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* Status chip */
+.wj-pass__chip {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+  background: #eff7f1;
+  padding: 4px 10px 4px 8px;
+  color: #236044;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.wj-pass__chip--expired {
+  background: #eceeee;
+  color: var(--wj-text-primary);
+}
+
+@media (max-width: 1100px) {
+  .wj-pass__intro,
+  .wj-pass__section-header,
+  .wj-pass__discover-header,
+  .wj-pass__summary,
+  .wj-pass__lower {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .wj-pass__tabs,
+  .wj-pass__facts,
+  .wj-pass__columns,
+  .wj-pass__cards {
+    flex-direction: column;
+  }
+  .wj-pass__balance,
+  .wj-pass__activity {
+    width: auto;
+    flex-basis: auto;
+  }
+  .wj-pass__column + .wj-pass__column {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .wj-pass__table {
+    display: block;
+    overflow-x: auto;
+  }
+  .wj-pass__section-title,
+  .wj-pass__details-header,
+  .wj-pass__route {
+    white-space: normal;
+  }
+}
+

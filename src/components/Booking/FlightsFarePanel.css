@@ -1,0 +1,222 @@
+/* Fare bundle panel ("Outbound Flight" in 1:10629) and promotion banner */
+.wj-flights__panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 6px;
+  background: var(--wj-surface-canvas);
+}
+.wj-flights__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 23px 6px;
+}
+.wj-flights__panel-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wj-flights__panel-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-flights__panel-header p {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__bundles {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  padding: 12px 23px 23px;
+}
+.wj-flights__bundle {
+  display: flex;
+  width: 389px;
+  flex-direction: column;
+  background: #fff;
+  /* Figma strokes sit inside the box, so draw the border without taking space. */
+  box-shadow: inset 0 0 0 1px var(--wj-border-subtle);
+}
+.wj-flights__bundle.is-selected {
+  box-shadow: inset 0 0 0 2px var(--wj-action-primary);
+}
+.wj-flights__bundle h4 {
+  padding: 16px 18px;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.wj-flights__bundle-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  height: 61px;
+  padding: 16px 18px 12px;
+  white-space: nowrap;
+}
+.wj-flights__bundle-price strong {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-flights__bundle-price span {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__bundle ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 18px 16px;
+}
+.wj-flights__bundle li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__bundle-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+.wj-flights__bundle-footer button {
+  height: 44px;
+  margin: 4px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 12px;
+  background: var(--wj-action-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  line-height: normal;
+}
+.wj-flights__bundle-footer button:hover {
+  background: var(--wj-action-hover);
+}
+.wj-flights__bundle-footer p {
+  color: #00aaa6;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+.wj-flights__panel-empty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+}
+.wj-flights__compare {
+  margin: 0 24px 24px;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__compare th,
+.wj-flights__compare td {
+  border: 1px solid var(--wj-border-subtle);
+  padding: 8px 12px;
+  text-align: left;
+}
+.wj-flights__compare thead th {
+  background: var(--wj-neutral-100);
+  font-weight: 600;
+}
+.wj-flights__compare tbody th {
+  font-weight: 400;
+}
+
+.wj-flights__promo {
+  position: relative;
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 24px 32px;
+}
+.wj-flights__promo > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+}
+.wj-flights__promo::before {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    104.51738789053051deg,
+    rgba(0, 51, 99, 0.8) 40.394%,
+    rgba(247, 247, 247, 0) 142.56%
+  );
+  content: "";
+  z-index: 1;
+}
+.wj-flights__promo-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: Inter, sans-serif;
+  line-height: normal;
+  white-space: nowrap;
+}
+.wj-flights__promo-text h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.wj-flights__promo-text p {
+  color: #fff0eb;
+  font-size: 13px;
+}
+.wj-flights__promo button {
+  position: relative;
+  z-index: 2;
+  height: 44px;
+  margin: 4px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 12px;
+  background: var(--wj-action-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  line-height: normal;
+}
+.wj-flights__promo button:hover {
+  background: var(--wj-action-hover);
+}
+.wj-flights__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  border: 1px solid var(--wj-border-subtle);
+  border-radius: 8px;
+  padding: 16px 32px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  list-style: disc;
+}

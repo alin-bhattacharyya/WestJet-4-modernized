@@ -1,0 +1,416 @@
+/* Book a flight (Figma V3 node 1:10388) */
+.wj-search__heading h1 {
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+}
+.wj-search__heading p {
+  padding-top: 8px;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+
+.wj-search__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1104px) 416px;
+  align-items: start;
+  gap: 16px;
+}
+
+/* Left card */
+.wj-search__card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  border: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: #fff;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-search__title {
+  color: var(--wj-text-primary);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.wj-search__tabs {
+  display: flex;
+  width: min(950px, 100%);
+  height: 57px;
+  margin-top: 16px;
+  border-bottom: 1px solid var(--wj-border-subtle);
+}
+.wj-search__tab {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--wj-border-subtle);
+  /* Figma: pt 12 in a 57px tab; 16 here lands the label on the same pixel row */
+  padding: 16px 20px 0;
+  color: var(--wj-text-primary);
+  font-size: 14px;
+  line-height: 24.5px;
+  cursor: pointer;
+}
+.wj-search__tab.is-active {
+  border-bottom-color: var(--wj-action-primary);
+  color: var(--wj-action-primary);
+}
+.wj-search__tab[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+.wj-search__tab:focus-visible {
+  outline: 2px solid var(--wj-action-hover);
+  outline-offset: -2px;
+}
+
+.wj-search__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 16px;
+  margin-top: 20px;
+}
+
+/* Fields */
+.wj-search__field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+.wj-search__label {
+  color: var(--wj-text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  /* Figma text boxes for 24.5px lines are 25px tall */
+  line-height: 25px;
+}
+.wj-search__hint {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-search__control {
+  position: relative;
+  height: 48px;
+}
+.wj-search__select,
+.wj-search__input,
+.wj-search__date {
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--wj-border-default);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+  font-size: 14px;
+  line-height: 24.5px;
+  outline: none;
+}
+.wj-search__select {
+  appearance: none;
+  cursor: pointer;
+}
+.wj-search__select--chevron {
+  padding-right: 38px;
+}
+.wj-search__select:focus-visible,
+.wj-search__input:focus,
+.wj-search__date:focus-within {
+  border-color: var(--wj-action-hover);
+  box-shadow: 0 0 0 1px var(--wj-action-hover);
+}
+.wj-search__icon {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+.wj-search__icon img {
+  display: block;
+}
+
+.wj-search__date {
+  display: flex;
+  align-items: center;
+}
+.wj-search__date .wj-search__icon {
+  /* Figma's calendar sits on a half-pixel; this matches its rendered position */
+  top: 14px;
+  right: 12px;
+}
+.wj-search__date-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.wj-search__date-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.wj-search__date-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+.wj-search__date.is-disabled {
+  background: var(--wj-neutral-100);
+  color: var(--wj-text-secondary);
+}
+.wj-search__date.is-disabled .wj-search__icon {
+  opacity: 0.4;
+}
+.wj-search__date-input:disabled {
+  cursor: not-allowed;
+}
+
+/* Toggles */
+.wj-search__toggles {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-top: 20px;
+}
+.wj-search__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.wj-search__toggle-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.wj-search__toggle-track {
+  display: block;
+  border-radius: 10px;
+}
+.wj-search__toggle-input:focus-visible + .wj-search__toggle-track {
+  outline: 2px solid var(--wj-action-hover);
+  outline-offset: 2px;
+}
+.wj-search__notice {
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Corporate travel details */
+.wj-search__corporate {
+  margin-top: 20px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding-top: 20px;
+}
+.wj-search__corporate-row {
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+}
+.wj-search__traveller {
+  flex: 0 1 467px;
+}
+.wj-search__purpose {
+  flex: 1 1 0;
+}
+.wj-search__reason {
+  padding-top: 16px;
+}
+.wj-search__error {
+  margin-top: 16px;
+  color: #c8102e;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+
+/* Right column */
+.wj-search__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--wj-font);
+}
+.wj-search__aside h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-search__benefits {
+  border: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: #003c71;
+  color: #fff;
+}
+.wj-search__benefits-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wj-search__benefits-title h2 {
+  color: #ffc107;
+}
+.wj-search__briefcase {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.wj-search__briefcase img {
+  position: absolute;
+  top: 0.82px;
+  left: 0.82px;
+  display: block;
+}
+.wj-search__benefit-rows {
+  /* Figma frame is 81px tall: 16 + 24.5 + 36.5 + 4 */
+  padding: 16px 0 4px;
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-search__benefit-rows div {
+  display: flex;
+  justify-content: space-between;
+}
+.wj-search__benefit-rows div + div {
+  padding-top: 12px;
+}
+.wj-search__benefits-note {
+  padding-top: 16px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.wj-search__policy {
+  border: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: #fff;
+  color: var(--wj-text-primary);
+}
+.wj-search__policy ul {
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 25px;
+}
+.wj-search__policy li + li {
+  padding-top: 4px;
+}
+
+.wj-search__promo {
+  position: relative;
+  display: flex;
+  height: 202px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 24px 32px;
+  color: #fff;
+  isolation: isolate;
+}
+/* Figma blends the gradient colour unpremultiplied (navy fades through grey), so the stops spell that out */
+.wj-search__promo::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    115.66deg,
+    rgb(0, 51, 99) 1.16%,
+    rgba(49, 90, 129, 0.8) 32.14%,
+    rgba(99, 129, 158, 0.6) 63.13%,
+    rgba(148, 169, 188, 0.4) 94.11%,
+    rgba(198, 208, 217, 0.2) 125.1%,
+    rgba(247, 247, 247, 0) 156.08%
+  );
+  content: "";
+}
+.wj-search__promo-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  /* Figma stretches the image to the banner (no crop) */
+  object-fit: fill;
+}
+.wj-search__promo-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: Inter, sans-serif;
+}
+.wj-search__aside .wj-search__promo-copy h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+.wj-search__promo-copy p {
+  font-size: 14px;
+  line-height: normal;
+  text-shadow: -4px 4px 10.1px rgba(0, 0, 0, 0.55);
+}
+.wj-search__promo-action {
+  padding: 4px;
+}
+.wj-search__promo-action button {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--wj-action-primary);
+  font-family: var(--wj-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  cursor: pointer;
+}
+.wj-search__promo-action button:hover {
+  border-color: var(--wj-action-hover);
+  color: var(--wj-action-hover);
+}
+
+@media (max-width: 1280px) {
+  .wj-search__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .wj-search__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .wj-search__corporate-row,
+  .wj-search__toggles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .wj-search__traveller {
+    flex-basis: auto;
+  }
+}

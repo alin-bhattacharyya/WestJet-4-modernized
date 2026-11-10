@@ -1,0 +1,183 @@
+/* Home dashboard right-hand column (Figma "Left Panel" 1:10349). */
+/* Right column */
+.wj-home__corporate {
+  display: flex;
+  height: 202px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(115.66deg, rgb(0 51 99 / 1) 1.16%, rgb(31 76 118 / 0.875) 20.525%, rgb(62 100 136 / 0.75) 39.89%, rgb(93 125 155 / 0.625) 59.255%, rgb(124 149 173 / 0.5) 78.62%, rgb(154 174 192 / 0.375) 97.985%, rgb(185 198 210 / 0.25) 117.35%, rgb(216 223 229 / 0.125) 136.715%, rgb(247 247 247 / 0) 156.08%),
+    url("/figma-assets/v3/home-promo-corporate.png") center / 100% 100% no-repeat;
+  padding: 24px 32px;
+  color: #fff;
+  font-family: Inter, var(--wj-font);
+}
+.wj-home__corporate > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wj-home__columns .wj-home__corporate h2 {
+  font-family: Inter, var(--wj-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+.wj-home__corporate p {
+  margin: 0;
+  font-size: 14px;
+  line-height: normal;
+  text-shadow: -4px 4px 10.1px rgb(0 0 0 / 55%);
+}
+.wj-home__card.wj-home__alerts {
+  border-width: 0.8px;
+  padding: 22px 24px;
+}
+.wj-home__count {
+  display: inline-flex;
+  height: 24px;
+  min-width: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #eff7f1;
+  padding: 3px 8px;
+  color: #236044;
+  font-family: Inter, var(--wj-font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.wj-home__pass {
+  display: flex;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px 24px;
+  box-shadow:
+    0 4px 3px rgb(0 0 0 / 10%),
+    0 10px 7.5px rgb(0 0 0 / 10%);
+}
+.wj-home__pass-image {
+  width: 129px;
+  min-height: 90px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: url("/figma-assets/v3/home-flightpass-thumb.jpg") center / cover no-repeat;
+}
+.wj-home__pass > div {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 16px 0 20px;
+}
+.wj-home__columns .wj-home__pass h2 {
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-home__pass p {
+  margin: 0;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-home__pass p b {
+  color: #00aaa6;
+  font-weight: 600;
+}
+.wj-home__pass .wj-home__action {
+  margin: 4px 0;
+}
+.wj-home__quick {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 8px;
+  background:
+    linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)),
+    linear-gradient(143.21deg, #154e55 8.39%, #017f7c 74.53%);
+  padding: 24px;
+}
+.wj-home__columns .wj-home__quick h2 {
+  height: 22px;
+  color: #fff;
+}
+.wj-home__quick-grid {
+  display: flex;
+  gap: 12px;
+}
+.wj-home__quick-grid > div,
+.wj-home__tier {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+.wj-home__tier {
+  gap: 16px;
+}
+.wj-home__tier header {
+  display: flex;
+  height: 33px;
+  align-items: center;
+  justify-content: space-between;
+}
+.wj-home__columns .wj-home__tier h2 {
+  color: #795500;
+  opacity: 0.85;
+}
+.wj-home__tier-box {
+  box-sizing: border-box;
+  height: 120.6px;
+  border: 0.8px solid rgb(255 255 255 / 28%);
+  border-radius: 6px;
+  background: #ffd100;
+  padding: 18px;
+  color: #795500;
+}
+.wj-home__tier-box b {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-home__tier-bar {
+  height: 9px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgb(255 255 255 / 40%);
+}
+.wj-home__tier-bar span {
+  display: block;
+  width: 191px;
+  max-width: 100%;
+  height: 9px;
+  border-radius: 20px;
+  background: #fff;
+}
+.wj-home__tier-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  opacity: 0.9;
+}
+.wj-home__alerts h2 {
+  white-space: nowrap;
+}
+.wj-home__alerts .wj-home__text-button {
+  margin: 6px 8px 2px 0;
+  padding: 0;
+}
+.wj-home__alerts .wj-home__row:last-child .wj-home__row-text {
+  gap: 0;
+}

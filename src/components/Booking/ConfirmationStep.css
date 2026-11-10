@@ -1,0 +1,251 @@
+.wj-confirmation__heading {
+  display: flex;
+  flex-direction: column;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-confirmation__heading h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+}
+.wj-confirmation__heading p {
+  position: relative;
+  top: 1px;
+  margin: 0;
+  padding-top: 8px;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+
+.wj-confirmation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--wj-text-primary);
+  font-family: var(--wj-font);
+}
+.wj-confirmation p {
+  margin: 0;
+}
+.wj-confirmation h2,
+.wj-confirmation h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-confirmation__muted {
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-confirmation__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  padding: 2px 10px 2px 8px;
+  background: #eff7f1;
+  color: #236044;
+  font-size: 14px;
+  line-height: 24.5px;
+  white-space: nowrap;
+}
+
+/* Hero */
+.wj-confirmation__hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--wj-border-subtle);
+  padding-right: 24px;
+  background: var(--wj-surface-default);
+}
+.wj-confirmation__hero-image {
+  position: relative;
+  width: 522px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.wj-confirmation__hero-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wj-confirmation__hero-body {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  white-space: nowrap;
+}
+.wj-confirmation__hero-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wj-confirmation .wj-confirmation__hero-head h2,
+.wj-confirmation__code {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+}
+.wj-confirmation__trip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-confirmation__reference {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding-top: 16px;
+}
+
+/* Notices */
+.wj-confirmation__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-left: 4px solid var(--wj-action-hover);
+  border-radius: 4px;
+  padding: 20px 20px 20.5px 16px;
+  background: #e5f2f3;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-confirmation__notice > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wj-confirmation .wj-confirmation__notice-title {
+  color: var(--wj-action-hover);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-confirmation__checkin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e0e7ff;
+  border-radius: 8px;
+  padding: 11px;
+  background: #eef2ff;
+  color: #003c71;
+  font-family: Inter, var(--wj-font);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.wj-confirmation__actions {
+  display: flex;
+  gap: 16px;
+}
+.wj-confirmation__outline,
+.wj-confirmation__primary {
+  display: inline-flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 4px;
+  padding: 0 12px;
+  background: var(--wj-surface-default);
+  color: var(--wj-action-primary);
+  font-family: var(--wj-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.wj-confirmation__outline {
+  width: 196px;
+}
+.wj-confirmation__outline:hover {
+  background: #e6f5f5;
+}
+.wj-confirmation__primary {
+  border-color: #fff;
+  background: var(--wj-action-primary);
+  color: var(--wj-text-inverse);
+}
+.wj-confirmation__primary:hover {
+  background: var(--wj-action-hover);
+}
+.wj-confirmation__outline:focus-visible,
+.wj-confirmation__primary:focus-visible {
+  outline: 2px solid var(--wj-action-hover);
+  outline-offset: 2px;
+}
+
+/* Columns */
+.wj-confirmation__columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.wj-confirmation__main {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-confirmation__side {
+  display: flex;
+  width: 400px;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 16px;
+}
+.wj-confirmation__card {
+  border: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: var(--wj-surface-default);
+}
+
+/* Promo */
+.wj-confirmation__promo {
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 24px 32px;
+  background: url("/figma-assets/v3/confirmation-promo.png") center bottom / cover no-repeat;
+  font-family: Inter, var(--wj-font);
+  white-space: nowrap;
+}
+.wj-confirmation__promo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wj-confirmation .wj-confirmation__promo h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+.wj-confirmation__promo p {
+  color: #fff0eb;
+  font-size: 13px;
+  line-height: normal;
+}

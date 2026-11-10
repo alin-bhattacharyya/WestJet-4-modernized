@@ -1,0 +1,208 @@
+/* Left filters panel and compliance notification (Figma 1:7556, 1:10499) */
+.wj-flights__filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: #fff;
+}
+.wj-flights__filters h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-flights__groups {
+  display: flex;
+  width: 310px;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 24px;
+}
+.wj-flights__group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wj-flights__group--range {
+  gap: 8px;
+}
+.wj-flights__group h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.wj-flights__options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.wj-flights__check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--wj-text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__check input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.wj-flights__check-box {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--wj-border-default);
+  border-radius: 4px;
+  background: #fff;
+}
+.wj-flights__check input:checked + .wj-flights__check-box {
+  border-color: var(--wj-action-primary);
+  background: var(--wj-action-primary) url("/figma-assets/v3/icon-check-white-14.svg")
+    center / 14px 14px no-repeat;
+}
+.wj-flights__check input:focus-visible + .wj-flights__check-box {
+  outline: 2px solid var(--wj-action-hover);
+  outline-offset: 2px;
+}
+.wj-flights__blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.wj-flights__blocks button {
+  width: 148px;
+  border-radius: 6px;
+  padding: 8px;
+  background: var(--wj-surface-canvas);
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.wj-flights__blocks button:hover {
+  background: #e6f5f5;
+}
+.wj-flights__blocks button.is-active {
+  background: var(--wj-action-primary);
+  color: #fff;
+}
+.wj-flights__group-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.wj-flights__group-title span {
+  color: var(--wj-action-primary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Dual-thumb range slider: two native ranges stacked over one track */
+.wj-flights__slider {
+  position: relative;
+  height: 24px;
+}
+.wj-flights__slider-track,
+.wj-flights__slider-progress {
+  position: absolute;
+  top: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.wj-flights__slider-track {
+  right: 0;
+  left: 0;
+  background: #e5e5e5;
+}
+.wj-flights__slider-progress {
+  background: var(--wj-action-primary);
+}
+.wj-flights__slider input {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: 24px;
+  margin: 0;
+  appearance: none;
+  background: none;
+  pointer-events: none;
+}
+.wj-flights__slider input::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 50%;
+  appearance: none;
+  background: #fff;
+  box-shadow:
+    0 4px 8px -2px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.wj-flights__slider input::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.wj-flights__slider input:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--wj-action-hover);
+  outline-offset: 1px;
+}
+.wj-flights__commission {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: var(--wj-text-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-flights__commission button {
+  display: flex;
+  border-radius: 10px;
+}
+
+.wj-flights__compliance {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-left: 4px solid #236044;
+  border-radius: 4px;
+  padding: 20px;
+  background: #eff7f1;
+}
+.wj-flights__compliance img {
+  flex-shrink: 0;
+  margin: 0.816px;
+}
+.wj-flights__compliance b {
+  color: #236044;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.wj-flights__compliance p {
+  padding-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
+}

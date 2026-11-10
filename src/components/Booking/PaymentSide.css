@@ -1,0 +1,297 @@
+/* Navy Payment / Cost summary card */
+.wj-payment__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #003363;
+  color: var(--wj-text-inverse);
+  white-space: nowrap;
+}
+.wj-payment__summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-payment__summary--pass .wj-payment__summary-rows {
+  gap: 12px;
+}
+.wj-payment__summary-rows > div,
+.wj-payment__summary-total,
+.wj-payment__summary-commission {
+  display: flex;
+  justify-content: space-between;
+}
+.wj-payment__summary-rows dd {
+  margin: 0;
+  font-weight: 600;
+}
+.wj-payment__summary-line {
+  height: 1px;
+  margin-top: -1px;
+  background: var(--wj-border-subtle);
+}
+.wj-payment__summary-total {
+  align-items: baseline;
+  font-weight: 600;
+}
+.wj-payment__summary-total span {
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-payment__summary-total b {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.wj-payment__summary-commission {
+  align-items: baseline;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wj-payment__summary-commission b {
+  color: #00aaa6;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+
+/* Contextual notice */
+.wj-payment__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-left: 4px solid var(--wj-action-hover);
+  border-radius: 4px;
+  padding: 20px 20px 20px 16px;
+  background: #e5f2f3;
+}
+.wj-payment__notice img {
+  flex-shrink: 0;
+}
+.wj-payment__notice > div {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 4px;
+}
+.wj-payment__notice p {
+  margin: 0;
+}
+.wj-payment__notice-title {
+  color: var(--wj-action-hover);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24.5px;
+}
+.wj-payment__notice-text {
+  font-size: 12px;
+  line-height: 18px;
+  white-space: pre-wrap;
+}
+.wj-payment__notice-text button {
+  color: var(--wj-action-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Flight Pass card */
+.wj-payment__pass {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--wj-action-primary);
+  border-radius: 8px;
+  padding-right: 24px;
+  background: var(--wj-surface-default);
+  filter: drop-shadow(0 10px 7.5px rgba(0, 0, 0, 0.1))
+    drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+}
+.wj-payment__pass-image {
+  position: relative;
+  width: 216px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 7px 0 0 7px;
+}
+.wj-payment__pass-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wj-payment__pass-body {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-right: 1px solid var(--wj-border-subtle);
+  padding: 24px;
+  white-space: nowrap;
+}
+.wj-payment__pass-details {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding-top: 16px;
+}
+.wj-payment__pass-details p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-payment .wj-payment__pass-company {
+  color: #171717;
+  font-family: Inter, var(--wj-font);
+  font-weight: 600;
+  line-height: 20px;
+}
+.wj-payment__pass-expiry {
+  align-items: flex-start;
+}
+.wj-payment__badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 2px 8px;
+  font-size: 14px;
+  line-height: 24.5px;
+  white-space: nowrap;
+}
+.wj-payment__badge--lime {
+  background: var(--wj-brand-lime);
+  color: var(--wj-text-primary);
+}
+.wj-payment__badge--teal {
+  background: #e5f2f3;
+  color: #00aaa6;
+}
+.wj-payment__badge--navy {
+  background: #003363;
+  color: var(--wj-text-inverse);
+}
+.wj-payment__pass-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+.wj-payment__selected {
+  display: flex;
+  width: 168px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: var(--wj-action-primary);
+  color: var(--wj-text-inverse);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+}
+.wj-payment__selected-icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.wj-payment__terms-link {
+  width: 196px;
+  height: 44px;
+  margin: 4px;
+  border-radius: 4px;
+  color: var(--wj-action-primary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  cursor: pointer;
+}
+.wj-payment__terms-link:hover {
+  background: #e6f5f5;
+}
+
+/* Credits + eligibility */
+.wj-payment__pass-row {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+.wj-payment__box {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  border: 2px solid var(--wj-border-subtle);
+  padding: 24px;
+  background: var(--wj-surface-default);
+}
+.wj-payment__box--credits {
+  background: #e5f2f3;
+}
+.wj-payment__credits-title {
+  margin: 0;
+  padding-top: 12px;
+  font-family: var(--wj-font-display);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24.5px;
+}
+.wj-payment__credit {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--wj-text-secondary);
+  font-size: 14px;
+  line-height: 24.5px;
+}
+.wj-payment__credit--total {
+  height: auto;
+  margin-top: 12px;
+  border-top: 1px solid var(--wj-border-subtle);
+  padding-top: 12px;
+  color: var(--wj-text-primary);
+  font-weight: 600;
+}
+.wj-payment__checks {
+  /* Figma centres the 18px text 2px lower inside the 24px row. */
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.wj-payment__checks li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.wj-payment__checks li > span:nth-child(2) {
+  flex: 1 1 0;
+}
+.wj-payment__traveller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
